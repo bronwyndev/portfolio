@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Candelabra';
+    src: url('/fonts/CandelabraRegular.woff2') format('woff2'),
+        url('/fonts/CandelabraRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url('/img/black-damask-2.webp');
+    background-attachment: fixed;
+    font-family: 'Rokkitt'
+}
+
+h1 {
+    font-family: 'Candelabra';
+    color: #dadedf;
+    font-size: 90px;
+    line-height: 70px;
+    margin-bottom: 5px;
+}
+h2 {
+    color: #dadedf;
+    font-size: 20px;
+    font-weight: 500;
+}
+h3 {
+
+}
+h4 {
+
+}
+p {
+    font-size: 20px;
+    color: #dadedf;
+    line-height: 1.2;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    color: #dadedf;
+    padding: 0px 20px;
+}
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: #3fff00;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+#home {
+    position:relative;
+}
+.button-parent {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+.button--fancy {
+    position: relative;
+    display: inline-block;
+    color: #dadedf;
+    font-family:'Candelabra';
+    font-size: 36px;
+    line-height: 1;
+    text-decoration: none;
+}
+.button--fancy::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 120%;
+    height: 40px;
+    background-image: url('/img/damask-border-bottom.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+.heading h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #dadedf;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.feature {
+    background-color: transparent;
+    perspective: 1000px;
+}
+.feature-inner {
+    color: #dadedf;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.feature:hover .feature-inner {
+    transform: rotateY(180deg);
+}
+.feature-front, .feature-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50% 28%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: #000;
+}
+.feature-front::after, .feature-back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-image: url('/img/damask-frame.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.feature-front img {
+    opacity: 0.8;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.feature-back {
+  background-color: #000;
+  transform: rotateY(180deg);
+}
+.feature-inner h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.feature-inner .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px 0px;
+}
+.feature-inner .tags span {
+    display: block;
+    background: #dadedf;
+    color: #121212;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contact {
+    padding: 100px 0px;
+}
+
+@media screen and (max-width:440px) {
+    #home {
+        padding: 50px 20px 100px !important;
+    }
+    .cta {
+        gap: 40px !important;
+    }
+    .button-parent {
+        position: relative !important;
+        bottom: initial !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+    }
+    .features { 
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
