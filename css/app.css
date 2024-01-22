@@ -242,6 +242,19 @@ nav {
     font-weight: 700;
     line-height: 1;
 }
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.placeholder h4 {
+    font-family: 'Candelabra';
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align:center;
+}
 
 .contact {
     padding: 100px 0px;
