@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Candelabra';
-    src: url('fonts/CandelabraRegular.woff2') format('woff2'),
-        url('fonts/CandelabraRegular.woff') format('woff');
+    src: url('/portfolio/fonts/CandelabraRegular.woff2') format('woff2'),
+        url('/portfolio/fonts/CandelabraRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: url('img/black-damask-2.webp');
+    background-image: url('/portfolio/img/black-damask-2.webp');
     background-attachment: fixed;
     font-family: 'Rokkitt'
 }
@@ -96,7 +96,7 @@ nav ul li a:hover::before {
     transform: translate(-50%, 0%);
     width: 120%;
     height: 40px;
-    background-image: url('img/damask-border-bottom.png');
+    background-image: url('/portfolio/img/damask-border-bottom.png');
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -149,7 +149,7 @@ nav ul li a:hover::before {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-image: url('img/damask-frame.png');
+    background-image: url('/portfolio/img/damask-frame.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
