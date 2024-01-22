@@ -11,6 +11,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    margin: 0px;
+    padding: 0px;
     background-image: url('/portfolio/img/black-damask-2.webp');
     background-attachment: fixed;
     font-family: 'Rokkitt'
