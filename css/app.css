@@ -24,12 +24,14 @@ h1 {
     font-size: 90px;
     font-weight: 400;
     line-height: 70px;
+    margin-top: 0px;
     margin-bottom: 5px;
 }
 h2 {
     color: #dadedf;
     font-size: 20px;
     font-weight: 500;
+    margin: 0px;
 }
 h3 {
 
