@@ -283,6 +283,12 @@ nav {
 
 /* Large Portrait Mobile */
 @media screen and (max-width:500px) {
+    nav ul li.social-icon {
+        padding: 0px 10px;
+    }
+    nav ul li:not(.social-icon) {
+        display: none;
+    }
     .introduction-block {
         padding: 50px 0px 100px;
     }
