@@ -68,6 +68,9 @@ a {
     justify-content: space-between;
     align-items: center
 }
+.no-bg {
+    padding: 100px 0px;
+}
 .dark-bg {
     background: #010101; 
     padding: 100px 0px; 
@@ -170,6 +173,7 @@ nav {
     background-size: 100%;
 }
 
+/* Portfolio Block */
 .features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -263,6 +267,13 @@ nav {
     text-align:center;
 }
 
+/* About Me Block */
+.about-me-block .blurb {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contact Block */
 .contact {
     padding: 100px 0px;
 }
