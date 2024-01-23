@@ -269,7 +269,9 @@ nav {
 
 /* Small Laptop & Landscape Tablet */
 @media screen and (max-width:1200px) {
-
+    .features { 
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Portrait Tablet & Landscape Mobile */
