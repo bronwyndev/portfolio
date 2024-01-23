@@ -34,10 +34,17 @@ h2 {
     margin: 0px;
 }
 h3 {
-
+    margin: 0px;
+}
+.heading h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #dadedf;
+    text-align: center;
+    margin-bottom: 40px;
 }
 h4 {
-
+    margin: 0px;
 }
 p {
     font-size: 20px;
@@ -60,6 +67,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+.dark-bg {
+    background: #010101; 
+    padding: 100px 0px; 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Header Styles */
@@ -162,13 +174,8 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 80px;
-}
-.heading h3 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #dadedf;
-    text-align: center;
-    margin-bottom: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 .feature {
     background-color: transparent;
@@ -250,9 +257,9 @@ nav {
 }
 .placeholder h4 {
     font-family: 'Candelabra';
-    font-size: 34px;
+    font-size: 50px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1;
     text-align:center;
 }
 
