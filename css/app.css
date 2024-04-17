@@ -68,6 +68,9 @@ a {
     justify-content: space-between;
     align-items: center
 }
+.no-bg {
+    padding: 100px 0px;
+}
 .dark-bg {
     background: #010101; 
     padding: 100px 0px; 
@@ -170,6 +173,7 @@ nav {
     background-size: 100%;
 }
 
+/* Portfolio Block */
 .features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -263,22 +267,51 @@ nav {
     text-align:center;
 }
 
+/* About Me Block */
+.about-me-block .blurb {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contact Block */
 .contact {
     padding: 100px 0px;
 }
 
-@media screen and (max-width:440px) {
-    #home {
-        padding: 50px 20px 100px !important;
+/* Small Laptop & Landscape Tablet */
+@media screen and (max-width:1200px) {
+    .features { 
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Portrait Tablet & Landscape Mobile */
+@media screen and (max-width:800px) {
+    .header-block {
+        flex-wrap: wrap;
+    }
+}
+
+/* Large Portrait Mobile */
+@media screen and (max-width:500px) {
+    nav ul li.social-icon {
+        padding: 0px 10px;
+    }
+    nav ul li:not(.social-icon) {
+        display: none;
+    }
+    .introduction-block {
+        padding: 50px 0px 100px;
     }
     .header-block {
-        gap: 40px !important;
+        gap: 40px;
     }
     .button-parent {
-        position: relative !important;
-        bottom: initial !important;
-        text-align: left !important;
-        padding-left: 20px !important;
+        position: relative;
+        bottom: initial;
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 20px;
     }
     .features { 
         grid-template-columns: 1fr;
