@@ -66,6 +66,12 @@ a {
 
 .container {
     padding: 0px 40px;
+    box-sizing: border-box;
+}
+.flex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 }
 .flex-standard {
     display: flex;
@@ -272,15 +278,59 @@ nav {
 }
 
 /* About Me Block */
-.about-me-block {
+.about-me-block .container {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
 }
 
 /* Contact Block */
-.contact {
-    padding: 100px 0px;
+.contact-block .container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.contact-block form {
+    margin-top: 40px;
+}
+.contact-block form input,
+.contact-block form textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Candelabra', 'Brush Script MT';
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+}
+.contact-block form input::placeholder,
+.contact-block form textarea::placeholder {
+    color: #fff;
+}
+.contact-block form textarea,
+.contact-block form a {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+
+footer {
+    border-top: 1px solid #ccc;
+    background: #010101; 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+}
+footer p {
+    padding: 40px 0px; 
+    text-align: center; 
+    font-size: 20px; 
+    color: #dadada;
 }
 
 /* Small Laptop & Landscape Tablet */
