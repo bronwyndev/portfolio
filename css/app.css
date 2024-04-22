@@ -50,6 +50,7 @@ p {
     font-size: 20px;
     color: #dadedf;
     line-height: 1.2;
+    text-align: justify;
     margin-top: 0px;
     margin-bottom: 15px;
     &:last-child {
@@ -154,7 +155,7 @@ nav {
     position: relative;
     display: inline-block;
     color: #dadedf;
-    font-family:'Candelabra';
+    font-family:'Candelabra', 'Brush Script MT';
     font-size: 36px;
     line-height: 1;
     text-decoration: none;
@@ -260,7 +261,7 @@ nav {
     transform: translate(-50%, -50%);
 }
 .placeholder h4 {
-    font-family: 'Candelabra';
+    font-family: 'Candelabra', 'Brush Script MT';
     font-size: 50px;
     font-weight: 400;
     line-height: 1;
@@ -268,7 +269,8 @@ nav {
 }
 
 /* About Me Block */
-.about-me-block .blurb {
+.about-me-block {
+    position: relative;
     max-width: 900px;
     margin: 0 auto;
 }
