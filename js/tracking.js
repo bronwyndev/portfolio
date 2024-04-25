@@ -68,26 +68,41 @@ document.addEventListener('DOMContentLoaded', function() {
 // Get the elements with class "feature"
 const featureElements = document.querySelectorAll('.feature');
 
-// Function to handle mouse enter event
-function handleMouseEnter() {
-    this.hoverStartTime = Date.now();
-}
+// Object to store hover start times for each feature element
+const hoverStartTimes = new Map();
 
+// Function to handle mouse enter event
+function handleMouseEnter(event) {
+    const element = event.target;
+    hoverStartTimes.set(element, Date.now());
+}
+    
 // Function to handle mouse leave event
-function handleMouseLeave() {
-    // Calculate hover duration in milliseconds
-    const hoverDuration = Date.now() - this.hoverStartTime;
-    // Convert milliseconds to seconds
-    const hoverDurationSeconds = hoverDuration / 1000;
-    // Retrieve the text from the <h4> element within the feature
-    const featureTitle = this.querySelector('h4').textContent;
-    // If hover duration exceeds 2 seconds, send event to Google Analytics
-    if (hoverDurationSeconds >= 2) {
-        gtag('event', 'Hover', {
-            'event_category': 'Feature Card',
-            'event_label': featureTitle,
-            'value': hoverDurationSeconds
-        });
+function handleMouseLeave(event) {
+    const element = event.target;
+    const hoverStartTime = hoverStartTimes.get(element);
+    
+    // If hover start time exists, calculate hover duration and send event to Google Analytics
+    if (hoverStartTime !== undefined) {
+        // Calculate hover duration in milliseconds
+        const hoverDuration = Date.now() - hoverStartTime;
+        // Convert milliseconds to seconds
+        const hoverDurationSeconds = hoverDuration / 1000;
+        
+        // Retrieve the text from the <h4> element within the feature
+        const featureTitle = element.querySelector('h4').textContent;
+        
+        // Send event to Google Analytics with the feature title as the label
+        if (hoverDurationSeconds >= 5) {
+            gtag('event', 'Hover', {
+                'event_category': 'Engagement',
+                'event_label': featureTitle,
+                'value': hoverDurationSeconds
+            });
+        }
+        
+        // Remove the entry from the map
+        hoverStartTimes.delete(element);
     }
 }
 
